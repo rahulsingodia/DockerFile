@@ -1,4 +1,4 @@
-FROM centos: latest
+FROM centos:latest
 
 RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/Centos-*
 
@@ -14,7 +14,7 @@ RUN unzip applight.zip
 
 RUN cp -rf Applight/*. &&\
 
-rm -rf Applight
+    rm -rf Applight
 
 EXPOSE 80
 
