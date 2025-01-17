@@ -7,5 +7,5 @@ WORKDIR /var/www/html
 RUN unzip applight.zip 
 RUN cp -rf Applight/* . &&\ 
      rm -rf Applight 
-EXPOSE 80
+EXPOSE 8
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
