@@ -6,6 +6,6 @@ RUN wget -O /var/www/html/neogym.zip https://www.free-css.com/assets/files/free-
 WORKDIR /var/www/html
 RUN unzip neogym.zip
 RUN cp -rf neogym-html/* . &&\
-    rm -rf neogym-html
+    rm -rf neogym-html 
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
