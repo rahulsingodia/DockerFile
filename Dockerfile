@@ -8,5 +8,6 @@ RUN unzip global.zip
 RUN rm -rf global.zip &&\
     cp -rf global-master/* . &&\
     rm -rf global-master
+RUN mkdir /root/test
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
